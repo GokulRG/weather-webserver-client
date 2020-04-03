@@ -5,6 +5,7 @@ const getLatLongForAGivenLocation = require('./utils/geocode');
 const getWeatherInformationForAGivenLatLong = require('./utils/weather');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // To serve up static files
 const publicDirPath = path.join(__dirname, '../public');
@@ -108,6 +109,6 @@ app.get('*', (req, res) => {
 
 // The app.listen method actually starts the server and you can also pass in a callback method
 // that runs when the server starts up
-app.listen(3000, () => {
-	console.log('Express server is up and running on port 3000.....');
+app.listen(port, () => {
+	console.log(`Express server is up and running on port ${port}.....`);
 });

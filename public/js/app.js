@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (event) => {
 	const address = addressBar.value;
 	messageOne.textContent = 'Loading...';
 
-	fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+	fetch(`/weather?address=${address}`).then((response) => {
 		response.json().then((data) => {
 			if (data.errors) {
 				messageOne.textContent = data.errors[0];
