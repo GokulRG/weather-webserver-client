@@ -50,7 +50,7 @@ app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help Page',
 		author: 'Gokul',
-		helpMessage: "If you want help with this simple weather application, I don't know what to tell you!!"
+		helpMessage: "Please fill in the location information in the search box. The application will return the weather of the topmost item that matched with your search term. If the weather information was returned for a location that you didn't intend to search for, try entering the complete address of the location."
 	});
 });
 
