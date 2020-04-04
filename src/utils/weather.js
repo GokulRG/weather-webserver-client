@@ -20,7 +20,9 @@ const getWeatherInformationForAGivenLatLong = (latitude, longitude, callback) =>
 			results: {
 				summary: daily.data[0].summary,
 				temperature: currently.temperature,
-				precipProbability: currently.precipProbability
+				precipProbability: currently.precipProbability,
+				dayHigh: daily.data[0].temperatureHigh,
+				dayLow: daily.data[0].temperatureLow
 			},
 			errors: null
 		});
